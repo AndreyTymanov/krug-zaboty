@@ -1810,6 +1810,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 }
 
 /* экран 08 */
+#экран-08.тёмный,#экран-08.светлый{--цвет-кнопки-навёл:var(--цвет-тёплый-мягкий)}
 #экран-08 .жр-сетка{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,5vw,80px);align-items:center}
 #экран-08 h2{font-size:var(--кегль-h1);line-height:1;letter-spacing:-.02em;max-width:12ch}
 #экран-08.светлый h2 span{color:var(--цвет-акцент)}
@@ -1832,7 +1833,8 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-08 .жр-окно::before{content:"";position:absolute;left:0;right:0;bottom:0;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,var(--цвет-акцент),var(--цвет-тёмный-фон-2) 72%)}
 #экран-08 .жр-окно img{position:absolute;left:-8%;width:116%;max-width:none;bottom:0;clip-path:inset(0 round 0 0 50% 50% / 0 0 40% 40%)}
 @media (max-width:899px){
-  #экран-08 .жр-сетка{grid-template-columns:1fr}
+  #экран-08.тёмный,#экран-08.светлый{--цвет-кнопки-навёл:var(--цвет-тёплый-мягкий)}
+#экран-08 .жр-сетка{grid-template-columns:1fr}
   #экран-08 .жр-круги{max-width:300px;order:-1}
 }
 

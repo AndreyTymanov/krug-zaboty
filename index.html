@@ -47,13 +47,13 @@
   --шрифт-заголовков: Montserrat, Manrope, system-ui, sans-serif;
   --шрифт-текста: Manrope, Montserrat, -apple-system, 'Segoe UI', sans-serif;
   --цвет-фон: #FBF8F1;  --цвет-фон-2: #F3EADB;  --цвет-фон-карточки: #FFFFFF;
-  --цвет-текст: #1E3A34;  --цвет-текст-мягкий: #4F625C;  --цвет-текст-тихий: #5E6F69;
+  --цвет-текст: #1E3A34;  --цвет-текст-мягкий: #4F625C;  --цвет-текст-тихий: #4F625C;
   --цвет-акцент: #2F6755;  --цвет-акцент-тёмный: #C9A55C;  --цвет-акцент-яркий: #7EA08C;
   --цвет-акцент-глубже: #245444;  --цвет-акцент-маркер: #B23A2B;
-  --цвет-на-акценте: #FFFFFF;  --цвет-линия: #E6DCC8;
+  --цвет-на-акценте: #FFFFFF;  --цвет-линия: rgba(30, 58, 52, .14);
   --цвет-тёмный-фон: #14201E;  --цвет-тёмный-фон-2: #1E3A34;  --цвет-тёмный-текст: #F3EADB;
-  --цвет-тёмный-фон-3: #182C28;  --цвет-тёмный-фон-4: #1A2622;
-  --цвет-тёплый: #C9A55C;  --цвет-тёплый-мягкий: #DCC290;
+  --цвет-тёмный-фон-3: #1E3A34;  --цвет-тёмный-фон-4: #14201E;
+  --цвет-тёплый: #C9A55C;  --цвет-тёплый-мягкий: #D8B873;
   --цвет-стекло: color-mix(in srgb, #14201E 86%, transparent);
   --тень: 0 18px 50px color-mix(in srgb, #1E3A34 10%, transparent);
   --тень-чип: 0 10px 30px color-mix(in srgb, #1E3A34 12%, transparent);
@@ -70,7 +70,7 @@
   --радиус-карточки: 24px;  --радиус-плитки: 24px;  --радиус-телефон: 46px;  --кнопка-радиус: 999px;
   --радиус-модуля: 18px;  --нить: 2px;
   --плавность: cubic-bezier(.2, .7, .2, 1);  --длительность: .3s;
-  --цвет-тёплый-тёмный: #8C6D2E;
+  --цвет-тёплый-тёмный: #8A6420;
 }
 @media (min-width: 900px) {
   :root { --кегль-h1: clamp(52px, 6vw, 86px); }
@@ -126,7 +126,7 @@
 <style>
 /* Своя композиция «Орбиты» (вариант 2А, выбран Андреем 08.10.2026): всё по центру, Андрей в окне
    внутреннего кольца, по внешней орбите бежит «Партнёрство с WHIEDA», подписи колец - переключатели */
-#экран-01{position:relative;overflow:hidden;padding:0;min-height:100svh;background:radial-gradient(120% 90% at 50% 30%,#1B2C29 0%,#14201E 60%);color:#F3EADB}
+#экран-01{position:relative;overflow:hidden;padding:0;min-height:100svh;background:radial-gradient(120% 90% at 50% 30%,#1E3A34 0%,#14201E 60%);color:#F3EADB}
 #экран-01 .орб-угол{position:absolute;top:22px;z-index:10;display:flex;align-items:center;gap:12px;font:600 .82rem var(--шрифт-текста);letter-spacing:.08em}
 #экран-01 .орб-угол.л{left:clamp(16px,5vw,72px)}#экран-01 .орб-угол.п{right:clamp(16px,5vw,72px)}
 #экран-01 .орб-угол img{height:34px;width:auto;display:block}
@@ -155,11 +155,11 @@
 #экран-01 .орб-круг{margin:0;font-size:1.02rem;line-height:1.55;color:#F3EADB;max-width:60ch;min-height:3.2em;transition:opacity .4s}
 #экран-01 .орб-круг b{color:#C9A55C}
 #экран-01 .орб-кнопка{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;background:#C9A55C;color:#14201E;font:700 1rem var(--шрифт-текста);text-decoration:none;transition:background .3s,transform .3s}
-#экран-01 .орб-кнопка:hover{background:#D8B871;transform:translateY(-2px)}
+#экран-01 .орб-кнопка:hover{background:#D8B873;transform:translateY(-2px)}
 #экран-01 .орб-связь{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font:600 .92rem var(--шрифт-текста)}
 #экран-01 .орб-связь a{color:#F3EADB;text-decoration:none;border-bottom:1px solid rgba(201,165,92,.45);padding:6px 0}
 #экран-01 .орб-связь a:hover{color:#C9A55C}
-#экран-01 .орб-честно{margin:0;font-size:.88rem;color:#DCC290}#экран-01 .орб-честно b{color:#DCC290}
+#экран-01 .орб-честно{margin:0;font-size:.88rem;color:#D8B873}#экран-01 .орб-честно b{color:#D8B873}
 #экран-01 a:focus-visible,#экран-01 button:focus-visible{outline:3px solid #E06A52;outline-offset:3px}
 @media (max-width:860px){
   #экран-01 .орб-партнёр{display:none}#экран-01 .орб-угол img{height:28px}
