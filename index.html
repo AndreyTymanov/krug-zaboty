@@ -62,7 +62,7 @@
   --тень-плиты: 0 40px 100px color-mix(in srgb, #14201E 70%, transparent);
   --кегль-h1: 34px;  --кегль-h2: clamp(28px, 3vw, 42px);
   --кегль-текст: 17px;  --кегль-лид: clamp(18px, 1.5vw, 22px);
-  --кегль-мелкий: 14px;  --кегль-кикер: 13px;  --разрядка-кикера: .16em;
+  --кегль-мелкий: 15px;  --кегль-кикер: 14px;  --разрядка-кикера: .16em;
   --кегль-цифра: 30px;
   --отступ-секции: clamp(64px, 9vw, 128px);  --отступ-блока: clamp(16px, 2vw, 28px);
   --отступ-секции-тихо: clamp(48px, 7vw, 96px);  --отступ-секции-громко: clamp(72px, 10.5vw, 140px);
@@ -129,7 +129,8 @@
 #экран-01{position:relative;overflow:hidden;padding:0;min-height:100svh;background:radial-gradient(120% 90% at 50% 30%,#1E3A34 0%,#14201E 60%);color:#F3EADB}
 #экран-01 .орб-угол{position:absolute;top:22px;z-index:10;display:flex;align-items:center;gap:12px;font:600 .82rem var(--шрифт-текста);letter-spacing:.08em}
 #экран-01 .орб-угол.л{left:clamp(16px,5vw,72px)}#экран-01 .орб-угол.п{right:clamp(16px,5vw,72px)}
-#экран-01 .орб-угол img{height:34px;width:auto;display:block}
+#экран-01 .орб-лого{display:flex;align-items:center;gap:10px;text-decoration:none;color:#FFFFFF;font:700 1.15rem var(--шрифт-заголовков);letter-spacing:0}
+#экран-01 .орб-лого svg{width:38px;height:38px}
 #экран-01 .орб-партнёр{padding:9px 16px;border:1px solid rgba(201,165,92,.5);border-radius:999px;color:#C9A55C;text-transform:uppercase}
 #экран-01 .орб-написать{text-decoration:none;padding:10px 18px;border-radius:999px;background:#C9A55C;color:#14201E;font-weight:700;letter-spacing:0}
 #экран-01 .орб-сцена{position:relative;width:min(56vh,92vw);aspect-ratio:1;margin:0 auto;margin-top:max(64px,6vh)}
@@ -148,7 +149,7 @@
 #экран-01 .орб-метки .м0{left:50%;top:79%}#экран-01 .орб-метки .м1{left:22.5%;top:62%}#экран-01 .орб-метки .м2{left:80%;top:22%}
 #экран-01 .орб-низ{position:relative;z-index:5;text-align:center;margin:-2vh auto 0;padding:3vh clamp(16px,5vw,72px) 40px;display:grid;justify-items:center;gap:14px;background:linear-gradient(rgba(20,32,30,0),rgba(20,32,30,.92) 18%,#14201E 40%)}
 #экран-01 .орб-низ>*{order:0!important}
-#экран-01 .кикер{margin:0;color:#C9A55C;font:700 13px var(--шрифт-текста);letter-spacing:.16em;text-transform:uppercase}
+#экран-01 .кикер{margin:0;color:#C9A55C;font:700 14px var(--шрифт-текста);letter-spacing:.16em;text-transform:uppercase}
 #экран-01 h1{margin:0;font:700 clamp(2rem,3.6vw,3.4rem)/1.1 var(--шрифт-заголовков);letter-spacing:-.015em;color:#fff;max-width:26ch}
 #экран-01 h1 span{color:#C9A55C}
 #экран-01 .орб-под{margin:0;font-size:1.05rem;line-height:1.55;color:#F3EADB;max-width:60ch}
@@ -162,7 +163,8 @@
 #экран-01 .орб-честно{margin:0;font-size:.88rem;color:#D8B873}#экран-01 .орб-честно b{color:#D8B873}
 #экран-01 a:focus-visible,#экран-01 button:focus-visible{outline:3px solid #E06A52;outline-offset:3px}
 @media (max-width:860px){
-  #экран-01 .орб-партнёр{display:none}#экран-01 .орб-угол img{height:28px}
+  #экран-01 .орб-партнёр{display:none}#экран-01 .орб-лого svg{width:32px;height:32px}#экран-01 .орб-лого{font-size:1.05rem}#экран-01 .орб-угол{font-size:.95rem}
+  #экран-01 .орб-круг{display:none}
   #экран-01 .орб-сцена{width:96vw;margin-top:72px}
   #экран-01 .орб-бег text{font-size:58px;letter-spacing:3px}
   #экран-01 .орб-низ{margin-top:0;padding-top:2vh}
@@ -170,7 +172,7 @@
 }
 @media (prefers-reduced-motion:reduce){#экран-01 .орб-бег{animation:none}}
 </style>
-  <div class="орб-угол л"><img src="img/logo-krug-zaboty-gorizont-na-temnom.svg" alt="Круг заботы · Андрей Туманов, независимый партнёр WHIEDA"></div>
+  <div class="орб-угол л"><a class="орб-лого" href="#экран-01" aria-label="Круг заботы · Андрей Туманов, независимый партнёр WHIEDA"><svg viewBox="-2 -2 72 72" aria-hidden="true"><path d="M58.58 25.54A26 26 0 1 1 38.07 8.32" fill="none" stroke="#C9A55C" stroke-width="4.2" stroke-linecap="round"/><path d="M50.08 30.29A16.5 16.5 0 1 1 34.86 17.52" fill="none" stroke="#7EA08C" stroke-width="4.2" stroke-linecap="round"/><circle cx="34" cy="34" r="6.4" fill="#E06A52"/></svg><span>Круг заботы</span></a></div>
   <div class="орб-угол п"><span class="орб-партнёр">Независимый партнёр WHIEDA</span><a class="орб-написать" href="https://t.me/AndreyTymanov" target="_blank" rel="noopener">Написать</a></div>
   <div class="орб-сцена" id="орб-сцена" data-k="0">
     <svg viewBox="0 0 1000 1000" aria-hidden="true">
@@ -226,7 +228,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--боль блок--тихо тёмный фон--сетка" id="экран-03" data-тип="боль" data-вёрстка="своя">
+<section class="блок блок--боль блок--тихо светлый фон--сетка" id="экран-03" data-тип="боль" data-вёрстка="своя">
 <span class="сетка-текстура" aria-hidden="true"></span>
 <div class="блок__внутри">
   <p class="жр-слово" aria-hidden="true">WHIEDA</p>
@@ -242,7 +244,7 @@
   </ul>
 </div>
 </section>
-<section class="блок блок--о-себе светлый" id="экран-04" data-тип="о-себе" data-вёрстка="своя">
+<section class="блок блок--о-себе тёмный" id="экран-04" data-тип="о-себе" data-вёрстка="своя">
 <div class="блок__внутри">
   <div class="жр-сетка">
     <figure class="фото"><img src="img/andrey-stol.webp" alt="Андрей Туманов за рабочим столом" loading="lazy"><figcaption>Андрей Туманов, Казань</figcaption></figure>
@@ -266,7 +268,7 @@
   </div>
 </div>
 </section>
-<section class="блок блок--решение блок--тихо тёмный второй фон--сетка" id="экран-05" data-тип="решение" data-вёрстка="своя">
+<section class="блок блок--решение блок--тихо светлый фон--сетка" id="экран-05" data-тип="решение" data-вёрстка="своя">
 <span class="сетка-текстура" aria-hidden="true"></span>
 <div class="блок__внутри">
   <div class="секция__шапка">
