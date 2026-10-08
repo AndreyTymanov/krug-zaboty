@@ -138,7 +138,9 @@
 #экран-01 .орб-бег{transform-origin:500px 500px;animation:орб-бег 90s linear infinite}
 @keyframes орб-бег{to{transform:rotate(-360deg)}}
 #экран-01 .орб-бег text{font:700 46px var(--шрифт-текста);letter-spacing:6px;fill:#C9A55C;text-transform:uppercase}
-#экран-01 .орб-бег .орб-белое{fill:#fff;font-weight:800}
+#экран-01 .орб-бег .орб-белое{fill:#FFFFFF;font-weight:800;font-size:76px;animation:орб-пульс 2.4s ease-in-out infinite}
+@keyframes орб-пульс{0%,100%{font-size:70px;fill:#FFFFFF}50%{font-size:88px;fill:#D8B873}}
+@keyframes орб-пульс-т{0%,100%{font-size:80px;fill:#FFFFFF}50%{font-size:98px;fill:#D8B873}}
 #экран-01 .орб-кольцо{transition:stroke-width .8s,opacity .8s}
 #экран-01 [data-k="0"] .к0,#экран-01 [data-k="1"] .к1,#экран-01 [data-k="2"] .к2{stroke-width:5.6;opacity:1}
 #экран-01 .орб-окно{position:absolute;left:50%;bottom:24%;width:36%;transform:translateX(-50%);aspect-ratio:1/1.32;margin:0}
@@ -167,6 +169,7 @@
   #экран-01 .орб-круг{display:none}
   #экран-01 .орб-сцена{width:96vw;margin-top:72px}
   #экран-01 .орб-бег text{font-size:58px;letter-spacing:3px}
+  #экран-01 .орб-бег .орб-белое{animation-name:орб-пульс-т}
   #экран-01 .орб-низ{margin-top:0;padding-top:2vh}
   #экран-01 .орб-действие,#экран-01 .орб-действие .кнопка{width:100%}
 }
@@ -175,7 +178,7 @@
   #экран-01 .орб-низ{gap:10px;padding-top:1vh;margin-top:-1vh}
   #экран-01 h1{font-size:clamp(1.9rem,3vw,2.8rem)}
 }
-@media (prefers-reduced-motion:reduce){#экран-01 .орб-бег{animation:none}}
+@media (prefers-reduced-motion:reduce){#экран-01 .орб-бег,#экран-01 .орб-бег .орб-белое{animation:none}}
 </style>
   <div class="орб-угол л"><a class="орб-лого" href="#экран-01" aria-label="Круг заботы · Андрей Туманов, независимый партнёр WHIEDA"><svg viewBox="-2 -2 72 72" aria-hidden="true"><path d="M58.58 25.54A26 26 0 1 1 38.07 8.32" fill="none" stroke="#C9A55C" stroke-width="4.2" stroke-linecap="round"/><path d="M50.08 30.29A16.5 16.5 0 1 1 34.86 17.52" fill="none" stroke="#7EA08C" stroke-width="4.2" stroke-linecap="round"/><circle cx="34" cy="34" r="6.4" fill="#E06A52"/></svg><span>Круг заботы</span></a></div>
   <div class="орб-угол п"><span class="орб-партнёр">Независимый партнёр WHIEDA</span><a class="орб-написать" href="https://t.me/AndreyTymanov" target="_blank" rel="noopener">Написать</a></div>
