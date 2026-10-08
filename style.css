@@ -1690,3 +1690,26 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-02.тёмный .жр-ряды div>span{color:color-mix(in srgb,var(--цвет-тёмный-текст) 80%,transparent)}
 #экран-02 .жр-ряды li:last-child .жр-ном{-webkit-text-stroke-color:var(--цвет-акцент-маркер)}
 @media (max-width:899px){#экран-02 .жр-сетка{grid-template-columns:1fr}#экран-02 .жр-шапка{position:static}#экран-02 .жр-ряды{column-gap:14px}}
+
+/* экран 03 */
+#экран-03 .жр-слово{margin:0 0 20px;font-size:var(--кегль-h1);font-weight:800;line-height:1;letter-spacing:.04em;color:transparent;user-select:none}
+#экран-03.светлый .жр-слово{-webkit-text-stroke:1.5px var(--цвет-акцент)}
+#экран-03.тёмный .жр-слово{-webkit-text-stroke:1.5px var(--цвет-тёплый)}
+#экран-03 .жр-плитки{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);column-gap:clamp(24px,4vw,56px)}
+#экран-03 .жр-плитки li{padding:24px 0 8px}
+#экран-03 .жр-плитки li:first-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.4fr;column-gap:clamp(24px,4vw,56px);padding-bottom:28px}
+#экран-03.светлый .жр-плитки li{border-top:2px solid var(--цвет-текст)}
+#экран-03.тёмный .жр-плитки li{border-top:2px solid var(--цвет-тёплый)}
+#экран-03 .жр-плитки b{display:block;font-size:var(--кегль-цифра);line-height:1.15;margin-bottom:10px}
+#экран-03 .жр-плитки li>span{font-size:var(--кегль-лид);line-height:1.55}
+#экран-03.светлый .жр-плитки li>span{color:var(--цвет-текст-мягкий)}
+#экран-03.тёмный .жр-плитки li>span{color:color-mix(in srgb,var(--цвет-тёмный-текст) 82%,transparent)}
+#экран-03 .жр-плитки a{font-weight:700;text-underline-offset:4px}
+#экран-03.светлый .жр-плитки a{color:var(--цвет-акцент)}
+#экран-03.тёмный .жр-плитки a{color:var(--цвет-тёплый)}
+@media (max-width:899px){
+  #экран-03 .жр-плитки{grid-template-columns:1fr}
+  #экран-03 .жр-плитки li:first-child{grid-template-columns:1fr}
+  #экран-03 .жр-плитки b{font-size:var(--кегль-лид)}
+  #экран-03 .жр-плитки li>span{font-size:var(--кегль-текст)}
+}
