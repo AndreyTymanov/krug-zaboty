@@ -1779,3 +1779,32 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-06.светлый .жр-две li>span{color:var(--цвет-текст-мягкий)}
 #экран-06.тёмный .жр-две li>span{color:color-mix(in srgb,var(--цвет-тёмный-текст) 80%,transparent)}
 @media (max-width:899px){#экран-06 .жр-две{grid-template-columns:1fr}#экран-06 .жр-две b{font-size:var(--кегль-лид)}#экран-06 .жр-две li>span{font-size:var(--кегль-текст)}}
+
+/* экран 07 */
+#экран-07 .жр-сетка{display:grid;grid-template-columns:.85fr 1.4fr;gap:clamp(32px,6vw,96px);align-items:start}
+#экран-07 .жр-лево{position:sticky;top:96px;display:grid;gap:28px}
+#экран-07 .жр-зов{padding:26px;border-radius:var(--радиус-карточки)}
+#экран-07.светлый .жр-зов{background:var(--цвет-тёмный-фон);color:var(--цвет-тёмный-текст)}
+#экран-07.тёмный .жр-зов{background:var(--цвет-тёмный-фон-2);color:var(--цвет-тёмный-текст);border:1px solid color-mix(in srgb,var(--цвет-тёплый) 25%,transparent)}
+#экран-07 .жр-зов b{display:block;font-size:var(--кегль-цифра);line-height:1.15;color:var(--цвет-тёмный-текст)}
+#экран-07 .жр-зов p{margin:8px 0 18px;font-size:var(--кегль-лид);color:color-mix(in srgb,var(--цвет-тёмный-текст) 82%,transparent)}
+#экран-07 .жр-связь{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:16px;font-size:var(--кегль-мелкий);font-weight:600}
+#экран-07 .жр-связь a{color:color-mix(in srgb,var(--цвет-тёмный-текст) 85%,transparent);text-decoration:none;padding:6px 0;border-bottom:1px solid color-mix(in srgb,var(--цвет-тёплый) 50%,transparent)}
+#экран-07 .жр-связь a:hover{color:var(--цвет-тёплый)}
+#экран-07 .жр-вопросы details{padding:6px 0}
+#экран-07.светлый .жр-вопросы details{border-top:2px solid var(--цвет-текст)}
+#экран-07.тёмный .жр-вопросы details{border-top:2px solid var(--цвет-тёплый)}
+#экран-07 .жр-вопросы summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;cursor:pointer;list-style:none;font-size:var(--кегль-лид);font-weight:700;line-height:1.35}
+#экран-07 .жр-вопросы summary::-webkit-details-marker{display:none}
+#экран-07 .жр-вопросы summary svg{flex:none;width:24px;height:24px;transition:transform var(--длительность) var(--плавность)}
+#экран-07 .жр-вопросы details[open] summary svg{transform:rotate(180deg)}
+#экран-07 .жр-ответ{padding:0 40px 18px 0;font-size:var(--кегль-лид);line-height:1.6}
+#экран-07.светлый .жр-ответ{color:var(--цвет-текст-мягкий)}
+#экран-07.тёмный .жр-ответ{color:color-mix(in srgb,var(--цвет-тёмный-текст) 82%,transparent)}
+@media (max-width:899px){
+  #экран-07 .жр-сетка{grid-template-columns:1fr}
+  #экран-07 .жр-лево{position:static}
+  #экран-07 .жр-вопросы summary{font-size:var(--кегль-текст)}
+  #экран-07 .жр-ответ{font-size:var(--кегль-текст);padding-right:0}
+  #экран-07 .жр-зов{order:2}
+}
