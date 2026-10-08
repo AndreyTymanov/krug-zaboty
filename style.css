@@ -1783,7 +1783,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 /* экран 07 */
 #экран-07 .жр-сетка{display:grid;grid-template-columns:.85fr 1.4fr;gap:clamp(32px,6vw,96px);align-items:start}
 #экран-07 .жр-лево{position:sticky;top:96px;display:grid;gap:28px}
-#экран-07 .жр-зов{padding:26px;border-radius:var(--радиус-карточки)}
+#экран-07 .жр-зов{padding:26px;border-radius:var(--радиус-карточки);--цвет-кнопки:var(--цвет-тёплый);--цвет-на-кнопке:var(--цвет-тёмный-фон);--цвет-кнопки-навёл:var(--цвет-тёплый-мягкий)}
 #экран-07.светлый .жр-зов{background:var(--цвет-тёмный-фон);color:var(--цвет-тёмный-текст)}
 #экран-07.тёмный .жр-зов{background:var(--цвет-тёмный-фон-2);color:var(--цвет-тёмный-текст);border:1px solid color-mix(in srgb,var(--цвет-тёплый) 25%,transparent)}
 #экран-07 .жр-зов b{display:block;font-size:var(--кегль-цифра);line-height:1.15;color:var(--цвет-тёмный-текст)}
