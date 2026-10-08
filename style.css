@@ -1744,3 +1744,23 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04 blockquote{font-size:var(--кегль-лид)}
   #экран-04 .жр-три{grid-template-columns:1fr;gap:4px}
 }
+
+/* экран 05 */
+#экран-05 .жр-лента{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,40px);position:relative}
+#экран-05 .жр-лента li{padding-top:22px}
+#экран-05.светлый .жр-лента li{border-top:2px solid var(--цвет-текст)}
+#экран-05.тёмный .жр-лента li{border-top:2px solid var(--цвет-тёплый)}
+#экран-05 .жр-ном{display:inline-block;font-size:var(--кегль-h1);font-weight:800;line-height:1;letter-spacing:-.03em;color:transparent}
+#экран-05.светлый .жр-ном{-webkit-text-stroke:1.5px var(--цвет-акцент)}
+#экран-05.тёмный .жр-ном{-webkit-text-stroke:1.5px var(--цвет-тёплый)}
+#экран-05 .жр-лента b{display:block;margin-top:18px;font-size:var(--кегль-цифра);line-height:1.15}
+#экран-05 .жр-лента p{margin:10px 0 0;font-size:var(--кегль-лид);line-height:1.55}
+#экран-05.светлый .жр-лента p{color:var(--цвет-текст-мягкий)}
+#экран-05.тёмный .жр-лента p{color:color-mix(in srgb,var(--цвет-тёмный-текст) 82%,transparent)}
+@media (max-width:899px){
+  #экран-05 .жр-лента{grid-template-columns:1fr;gap:28px}
+  #экран-05 .жр-лента li{display:grid;grid-template-columns:auto 1fr;column-gap:16px}
+  #экран-05 .жр-ном{grid-row:span 2}
+  #экран-05 .жр-лента b{margin-top:4px;font-size:var(--кегль-лид)}
+  #экран-05 .жр-лента p{margin-top:4px;font-size:var(--кегль-текст)}
+}
