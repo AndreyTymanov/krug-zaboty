@@ -1713,3 +1713,34 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-03 .жр-плитки b{font-size:var(--кегль-лид)}
   #экран-03 .жр-плитки li>span{font-size:var(--кегль-текст)}
 }
+
+/* экран 04 */
+#экран-04 .жр-сетка{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,88px);align-items:start}
+#экран-04 figure.фото{margin:0;position:sticky;top:96px;border-radius:var(--радиус-карточки);overflow:hidden;aspect-ratio:4/5;box-shadow:var(--тень-глубокая)}
+#экран-04 figure.фото img{width:100%;height:100%;object-fit:cover;object-position:72% 40%;display:block}
+#экран-04 figure.фото figcaption{position:absolute;left:16px;bottom:16px;padding:8px 14px;border-radius:9em;font-size:var(--кегль-мелкий);font-weight:600}
+#экран-04.светлый figure.фото figcaption{background:var(--цвет-фон-карточки);color:var(--цвет-текст)}
+#экран-04.тёмный figure.фото figcaption{background:var(--цвет-тёмный-фон);color:var(--цвет-тёмный-текст)}
+#экран-04 .жр-кто{margin:6px 0 0;font-size:var(--кегль-лид);font-weight:700}
+#экран-04.светлый .жр-кто{color:var(--цвет-акцент)}
+#экран-04.тёмный .жр-кто{color:var(--цвет-тёплый)}
+#экран-04 .жр-текст p{margin:18px 0 0;font-size:var(--кегль-лид);line-height:1.6}
+#экран-04.светлый .жр-текст p{color:var(--цвет-текст-мягкий)}
+#экран-04.тёмный .жр-текст p{color:color-mix(in srgb,var(--цвет-тёмный-текст) 85%,transparent)}
+#экран-04 blockquote{margin:32px 0 0;padding:22px 0 0;font-size:var(--кегль-цифра);font-weight:700;line-height:1.25}
+#экран-04.светлый blockquote{border-top:2px solid var(--цвет-текст);color:var(--цвет-текст)}
+#экран-04.тёмный blockquote{border-top:2px solid var(--цвет-тёплый);color:var(--цвет-тёмный-текст)}
+#экран-04 .жр-три{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+#экран-04 .жр-три li{padding-top:14px}
+#экран-04.светлый .жр-три li{border-top:1px solid var(--цвет-линия)}
+#экран-04.тёмный .жр-три li{border-top:1px solid color-mix(in srgb,var(--цвет-тёмный-текст) 20%,transparent)}
+#экран-04 .жр-три b{display:block;font-size:var(--кегль-лид);margin-bottom:4px}
+#экран-04.светлый .жр-три span{color:var(--цвет-текст-мягкий)}
+#экран-04.тёмный .жр-три span{color:color-mix(in srgb,var(--цвет-тёмный-текст) 78%,transparent)}
+@media (max-width:899px){
+  #экран-04 .жр-сетка{grid-template-columns:1fr}
+  #экран-04 figure.фото{position:static;aspect-ratio:4/3}
+  #экран-04 .жр-текст p{font-size:var(--кегль-текст)}
+  #экран-04 blockquote{font-size:var(--кегль-лид)}
+  #экран-04 .жр-три{grid-template-columns:1fr;gap:4px}
+}
