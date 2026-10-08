@@ -127,13 +127,13 @@
 /* Своя композиция «Орбиты» (вариант 2А, выбран Андреем 08.10.2026): всё по центру, Андрей в окне
    внутреннего кольца, по внешней орбите бежит «Партнёрство с WHIEDA», подписи колец - переключатели */
 #экран-01{position:relative;overflow:hidden;padding:0;min-height:100svh;background:radial-gradient(120% 90% at 50% 30%,#1E3A34 0%,#14201E 60%);color:#F3EADB}
-#экран-01 .орб-угол{position:absolute;top:22px;z-index:10;display:flex;align-items:center;gap:12px;font:600 .82rem var(--шрифт-текста);letter-spacing:.08em}
+#экран-01 .орб-угол{position:absolute;top:22px;z-index:10;display:flex;align-items:center;gap:12px;font:600 .95rem var(--шрифт-текста);letter-spacing:.06em}
 #экран-01 .орб-угол.л{left:clamp(16px,5vw,72px)}#экран-01 .орб-угол.п{right:clamp(16px,5vw,72px)}
 #экран-01 .орб-лого{display:flex;align-items:center;gap:10px;text-decoration:none;color:#FFFFFF;font:700 1.15rem var(--шрифт-заголовков);letter-spacing:0}
 #экран-01 .орб-лого svg{width:38px;height:38px}
 #экран-01 .орб-партнёр{padding:9px 16px;border:1px solid rgba(201,165,92,.5);border-radius:999px;color:#C9A55C;text-transform:uppercase}
 #экран-01 .орб-написать{text-decoration:none;padding:10px 18px;border-radius:999px;background:#C9A55C;color:#14201E;font-weight:700;letter-spacing:0}
-#экран-01 .орб-сцена{position:relative;width:min(56vh,92vw);aspect-ratio:1;margin:0 auto;margin-top:max(64px,6vh)}
+#экран-01 .орб-сцена{position:relative;width:min(48vh,92vw);aspect-ratio:1;margin:0 auto;margin-top:max(72px,7vh)}
 #экран-01 .орб-сцена svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 #экран-01 .орб-бег{transform-origin:500px 500px;animation:орб-бег 90s linear infinite}
 @keyframes орб-бег{to{transform:rotate(-360deg)}}
@@ -155,8 +155,8 @@
 #экран-01 .орб-под{margin:0;font-size:1.05rem;line-height:1.55;color:#F3EADB;max-width:60ch}
 #экран-01 .орб-круг{margin:0;font-size:1.02rem;line-height:1.55;color:#F3EADB;max-width:60ch;min-height:3.2em;transition:opacity .4s}
 #экран-01 .орб-круг b{color:#C9A55C}
-#экран-01 .орб-кнопка{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;background:#C9A55C;color:#14201E;font:700 1rem var(--шрифт-текста);text-decoration:none;transition:background .3s,transform .3s}
-#экран-01 .орб-кнопка:hover{background:#D8B873;transform:translateY(-2px)}
+#экран-01 .орб-действие{display:flex;justify-content:center}
+#экран-01 .орб-действие .кнопка{min-height:54px;padding:0 28px;border-radius:999px;font-size:1rem}
 #экран-01 .орб-связь{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font:600 .92rem var(--шрифт-текста)}
 #экран-01 .орб-связь a{color:#F3EADB;text-decoration:none;border-bottom:1px solid rgba(201,165,92,.45);padding:6px 0}
 #экран-01 .орб-связь a:hover{color:#C9A55C}
@@ -168,7 +168,12 @@
   #экран-01 .орб-сцена{width:96vw;margin-top:72px}
   #экран-01 .орб-бег text{font-size:58px;letter-spacing:3px}
   #экран-01 .орб-низ{margin-top:0;padding-top:2vh}
-  #экран-01 .орб-кнопка{width:100%}
+  #экран-01 .орб-действие,#экран-01 .орб-действие .кнопка{width:100%}
+}
+@media (min-width:861px) and (max-height:820px){
+  #экран-01 .орб-сцена{width:min(40vh,92vw);margin-top:64px}
+  #экран-01 .орб-низ{gap:10px;padding-top:1vh;margin-top:-1vh}
+  #экран-01 h1{font-size:clamp(1.9rem,3vw,2.8rem)}
 }
 @media (prefers-reduced-motion:reduce){#экран-01 .орб-бег{animation:none}}
 </style>
@@ -190,7 +195,7 @@
     <h1>Три круга одной жизни: <span>я, близкие, дело</span></h1>
     <p class="орб-под">Я Андрей Туманов, независимый партнёр WHIEDA. Забота о себе, о близких и своё дело с поддержкой команды</p>
     <p class="орб-круг" id="орб-круг" aria-live="polite"><b>Я</b> - забота о себе. Расскажу о продукции WHIEDA спокойно и без громких слов: что это и кому подходит</p>
-    <a class="орб-кнопка" href="https://t.me/AndreyTymanov" target="_blank" rel="noopener">Обсудить партнёрство с WHIEDA</a>
+    <div class="первый-экран__действие орб-действие"><a class="кнопка кнопка--главная" href="https://t.me/AndreyTymanov">Обсудить партнёрство с WHIEDA</a></div>
     <div class="орб-связь">
       <a href="https://max.ru/u/f9LHodD0cOI62tobt6cCv0GNMzPMMu8sw2jGDPEFasSk-9MV9cb6i8744rw" target="_blank" rel="noopener">MAX</a>
       <a href="https://vk.ru/whiedaandreytymanov" target="_blank" rel="noopener">ВКонтакте</a>
@@ -380,7 +385,7 @@
   </div>
 </div>
 </section>
-<div class="липкая-кнопка липкая-кнопка--тёмная"><a class="кнопка кнопка--главная" href="https://t.me/AndreyTymanov">Задать свой вопрос</a></div>
+<div class="липкая-кнопка липкая-кнопка--тёмная"><a class="кнопка кнопка--главная" href="https://t.me/AndreyTymanov">Обсудить партнёрство с WHIEDA</a></div>
 <script>
 (function () {
   var СПИТ = "главная-на-виду";                       // класс на body; правило сна — в стилях
