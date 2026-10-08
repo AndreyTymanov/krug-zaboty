@@ -1764,3 +1764,18 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-05 .жр-лента b{margin-top:4px;font-size:var(--кегль-лид)}
   #экран-05 .жр-лента p{margin-top:4px;font-size:var(--кегль-текст)}
 }
+
+/* экран 06 */
+#экран-06 .жр-крупно{margin:0 0 8px;font-size:var(--кегль-h1);font-weight:800;line-height:.9;letter-spacing:-.04em}
+#экран-06.светлый .жр-крупно{color:var(--цвет-текст)}
+#экран-06.тёмный .жр-крупно{color:var(--цвет-тёмный-текст)}
+#экран-06 .жр-крупно span{color:var(--цвет-акцент-маркер)}
+#экран-06 .жр-две{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,5vw,72px)}
+#экран-06 .жр-две li{padding:22px 0}
+#экран-06.светлый .жр-две li{border-top:2px solid var(--цвет-текст)}
+#экран-06.тёмный .жр-две li{border-top:2px solid var(--цвет-тёплый)}
+#экран-06 .жр-две b{display:block;font-size:var(--кегль-цифра);line-height:1.15;margin-bottom:10px}
+#экран-06 .жр-две li>span{font-size:var(--кегль-лид);line-height:1.55}
+#экран-06.светлый .жр-две li>span{color:var(--цвет-текст-мягкий)}
+#экран-06.тёмный .жр-две li>span{color:color-mix(in srgb,var(--цвет-тёмный-текст) 80%,transparent)}
+@media (max-width:899px){#экран-06 .жр-две{grid-template-columns:1fr}#экран-06 .жр-две b{font-size:var(--кегль-лид)}#экран-06 .жр-две li>span{font-size:var(--кегль-текст)}}
